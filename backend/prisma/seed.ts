@@ -34,18 +34,78 @@ const CONTACTS = [
 ] as const;
 
 const DEALS: Array<{ company: string; valueCents: number; stage: "DISCOVERY" | "PROPOSAL" | "NEGOTIATION" | "CLOSED_WON" | "CLOSED_LOST"; note: string }> = [
-  { company: "Momo (M_Service)", valueCents: 5_800_000, stage: "DISCOVERY", note: "Next call Thursday" },
-  { company: "Zalo", valueCents: 12_400_000, stage: "PROPOSAL", note: "Proposal sent 3 days ago" },
-  { company: "MobiFone", valueCents: 9_850_000, stage: "NEGOTIATION", note: "Redline on SLA terms" },
-  { company: "Vinaphone", valueCents: 3_150_000, stage: "DISCOVERY", note: "Scoping doc due" },
-  { company: "Vietnam Posts and Telecommunications Group", valueCents: 18_700_000, stage: "NEGOTIATION", note: "Budget sign-off pending" },
-  { company: "Adamo Software", valueCents: 6_200_000, stage: "PROPOSAL", note: "Awaiting technical review" },
-  { company: "Luvina Software Joint Stock Company", valueCents: 8_700_000, stage: "CLOSED_WON", note: "Kickoff scheduled" },
-  { company: "Mageplaza", valueCents: 4_130_000, stage: "CLOSED_WON", note: "Onboarding in progress" },
-  { company: "bTaskee", valueCents: 2_900_000, stage: "CLOSED_LOST", note: "Went with an in-house build" },
-  { company: "FPT Digital Retail", valueCents: 7_620_000, stage: "PROPOSAL", note: "Second meeting booked" },
-  { company: "SotaMedia", valueCents: 5_290_000, stage: "NEGOTIATION", note: "Verbal yes, contract out" },
-  { company: "Pharmacity", valueCents: 4_410_000, stage: "DISCOVERY", note: "Intro call next week" },
+  {
+    company: "Momo (M_Service)",
+    valueCents: 42_000_000,
+    stage: "DISCOVERY",
+    note: "Digital wallet platform modernization — replacing their legacy transaction ledger with an event-driven architecture ahead of a planned IPO filing. Had an exploratory call with the Head of Partnerships; she's bringing in their CTO for a technical deep-dive next Thursday. Scope still loose — could land anywhere from a 6-month advisory engagement to a full 18-month build.",
+  },
+  {
+    company: "Zalo",
+    valueCents: 18_500_000,
+    stage: "PROPOSAL",
+    note: "Enterprise notification and chat-API integration for their business messaging product. Sent a detailed proposal 3 days ago covering a phased rollout (pilot with 2 merchant partners, then general availability). No response yet — following up Monday if we haven't heard back. Their VP Engineering seemed genuinely enthusiastic in the first call, which is a good sign.",
+  },
+  {
+    company: "MobiFone",
+    valueCents: 65_000_000,
+    stage: "NEGOTIATION",
+    note: "Largest deal in the pipeline right now — a full OSS/BSS integration tying their billing, provisioning, and customer-care systems together across three regional data centers. We're down to one sticking point: their legal team wants a 99.95% uptime SLA with financial penalties attached, and our standard terms cap liability lower than that. Escalating to leadership this week to see how much room we actually have.",
+  },
+  {
+    company: "Vinaphone",
+    valueCents: 9_500_000,
+    stage: "DISCOVERY",
+    note: "Customer self-service portal rebuild — their current one is a decade-old PHP app nobody wants to touch. IT Director asked for a scoping document before committing to anything, due back to them by end of week. Smaller deal but could be a good foot-in-the-door for the rest of the VNPT group.",
+  },
+  {
+    company: "Vietnam Posts and Telecommunications Group",
+    valueCents: 120_000_000,
+    stage: "NEGOTIATION",
+    note: "National-scale broadband rollout analytics platform — real-time network health dashboards across every province, feeding into their 5-year infrastructure investment planning. This is a multi-year framework agreement, not a single project, which is why it's taking so long. Budget sign-off is sitting with their board; our champion (the CTO) says it's \"very likely\" to clear next quarter but nothing's final until it's final.",
+  },
+  {
+    company: "Adamo Software",
+    valueCents: 14_000_000,
+    stage: "PROPOSAL",
+    note: "Staff augmentation engagement — they need a dedicated 4-person squad for 9 months to help ship a client project they're overcommitted on. Proposal is with their technical reviewer now; he flagged a couple of rate-card questions we've already answered over email, just waiting on the formal go-ahead.",
+  },
+  {
+    company: "Luvina Software Joint Stock Company",
+    valueCents: 21_000_000,
+    stage: "CLOSED_WON",
+    note: "Signed — a 12-month offshore QA and test-automation engagement covering three of their ongoing client projects. Kickoff call scheduled for next Monday with their CEO and delivery leads. This one moved fast: first conversation to signature in under three weeks, mostly because we already had a working relationship from a smaller project last year.",
+  },
+  {
+    company: "Mageplaza",
+    valueCents: 7_800_000,
+    stage: "CLOSED_WON",
+    note: "Built out a multi-store Magento extension suite for their enterprise clients — custom checkout flows, inventory sync, and a loyalty-points module. Delivered on time, currently in the onboarding phase getting their support team trained on the codebase before we hand off full ownership.",
+  },
+  {
+    company: "bTaskee",
+    valueCents: 6_500_000,
+    stage: "CLOSED_LOST",
+    note: "Lost this one — they decided to build the logistics routing optimization in-house after their new VP of Engineering joined and pushed for more control over core infrastructure. Worth staying in touch; their current team is small and they may come back to us for the pieces that aren't core to their business.",
+  },
+  {
+    company: "FPT Digital Retail",
+    valueCents: 34_000_000,
+    stage: "PROPOSAL",
+    note: "Omnichannel inventory sync platform — unifying stock visibility across their online store and 40+ physical locations in real time. Had a strong first meeting; second one is booked for next week with their ops team to walk through the current manual reconciliation process we'd be replacing. Head of Digital is the internal champion pushing this forward.",
+  },
+  {
+    company: "SotaMedia",
+    valueCents: 15_500_000,
+    stage: "NEGOTIATION",
+    note: "Marketing automation platform build — campaign orchestration, audience segmentation, and attribution reporting in one tool, replacing the patchwork of spreadsheets and third-party tools they're currently stitching together. Verbal yes from their Marketing Director; contract is with legal for final review. Expecting signature within two weeks barring surprises.",
+  },
+  {
+    company: "Pharmacity",
+    valueCents: 29_000_000,
+    stage: "DISCOVERY",
+    note: "Prescription management system with pharmacist-facing dispensing workflows and patient history tracking — a regulated-data project, so compliance requirements will shape the scope significantly. Intro call booked for next week with their IT Director; bringing a healthcare-data specialist from our side to make sure we ask the right questions upfront.",
+  },
 ];
 
 async function main() {
