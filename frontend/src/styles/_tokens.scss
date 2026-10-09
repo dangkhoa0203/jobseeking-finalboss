@@ -1,0 +1,28 @@
+// Signal Dark — a deliberately single-theme, high-contrast dark workspace. Committed dark,
+// not a dark mode of a light app: see the Pursuit UI Directions artifact this was chosen from.
+:root {
+  --paper: #151320;
+  --surface: #1b1830;
+  --surface-raised: #211d3c;
+  --ink: #eceaf5;
+  --ink-soft: #8d89a8;
+  --border: #2a2740;
+
+  --accent: #7c6ff2;
+  --accent-ink: #ffffff;
+  --accent-soft: #272150;
+
+  --win: #3ecf8e;
+  --lose: #f0614f;
+  --mid: #e8b339;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Karla", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: 7px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  color-scheme: dark;
+}

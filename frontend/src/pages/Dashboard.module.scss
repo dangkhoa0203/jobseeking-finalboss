@@ -1,0 +1,85 @@
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.logout {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  border-radius: var(--radius-sm);
+  padding: 7px 13px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.error {
+  color: var(--lose);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.boardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 26px 0 14px;
+}
+
+.boardTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.newDealBtn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 700;
+  font-size: 13px;
+}

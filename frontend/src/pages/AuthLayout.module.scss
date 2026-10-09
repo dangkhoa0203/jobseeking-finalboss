@@ -1,0 +1,113 @@
+.page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.lede {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.field input {
+  width: 100%;
+}
+
+.submit {
+  width: 100%;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  color: var(--lose);
+  font-size: 12.5px;
+  margin-bottom: 12px;
+}
+
+.switch {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.demoHint {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  line-height: 1.6;
+}

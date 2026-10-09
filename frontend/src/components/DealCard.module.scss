@@ -1,0 +1,77 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 12px 13px;
+}
+
+.card.won {
+  border-color: #1e3b30;
+  background: #141f1a;
+}
+
+.card.lost {
+  opacity: 0.6;
+}
+
+.company {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.contact {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin-bottom: 9px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.value.won {
+  color: var(--win);
+}
+
+.note {
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  margin-bottom: 9px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.stageSelect {
+  flex: 1;
+  font-size: 11px;
+  padding: 5px 7px;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+.deleteBtn:hover {
+  color: var(--lose);
+  border-color: var(--lose);
+}

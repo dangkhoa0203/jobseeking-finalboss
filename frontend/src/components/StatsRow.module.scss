@@ -1,0 +1,36 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--border);
+}
+
+.stat {
+  background: var(--surface);
+  padding: 14px 16px;
+}
+
+.label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
