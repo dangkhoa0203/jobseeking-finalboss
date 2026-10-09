@@ -15,11 +15,20 @@ pnpm install                # re-run so the approved builds actually execute
 
 cp .env.example .env        # fill in DATABASE_URL, JWT_SECRET
 pnpm exec prisma generate
-pnpm exec prisma migrate dev --name init   # creates the tables
+pnpm exec tsx prisma/push-schema.ts        # creates the tables — see note below
 pnpm exec tsx prisma/seed.ts               # optional: demo data
 
 pnpm dev                    # http://localhost:4000
 ```
+
+### Why `push-schema.ts` instead of `prisma migrate dev` / `prisma db push`
+
+Both of Prisma's own schema-sync commands hang indefinitely against Supabase's transaction-mode
+pooler (port 6543) — `migrate dev` needs a shadow database, and `db push` needs an advisory lock
+that PgBouncer's transaction pooling doesn't support. The app's actual runtime queries (via
+`@prisma/adapter-pg`) work fine through the same pooler; only Prisma's CLI schema-engine doesn't.
+`push-schema.ts` creates the tables with a plain `pg` client instead, sidestepping the CLI
+entirely. If you change `schema.prisma`, update this script's SQL to match.
 
 ## Scripts
 
