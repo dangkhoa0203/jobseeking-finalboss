@@ -41,8 +41,8 @@ jobs:
         run: pnpm run build
         env:
           VITE_API_BASE: https://jobseeking-finalboss.onrender.com
-          # Served from a /jobseeking-finalboss/ subpath on GitHub Pages, not the domain root.
-          BASE_PATH: /jobseeking-finalboss/
+          # Served from a /pursuit/ subpath on GitHub Pages, not the domain root.
+          BASE_PATH: /pursuit/
       - name: SPA fallback for client-side routes
         # GitHub Pages has no server-side rewrites — a direct hit or refresh on /login etc.
         # 404s otherwise, since only index.html actually exists as a file. Pages' documented
